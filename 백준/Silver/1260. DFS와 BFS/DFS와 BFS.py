@@ -1,6 +1,6 @@
 from collections import deque
 
-#정점만 찾아나가는 방식식
+#정점만 찾아나가는 방식
 def dfs(V):
     visited_dfs[V] = True
     print(V, end=' ')
@@ -9,7 +9,7 @@ def dfs(V):
             dfs(W)
 
 def bfs(V):
-    queue = deque([V]) #pop메서드의 시간복잡도가 낮은 덱 내장 메서드 이용용
+    queue = deque([V]) #pop메서드의 시간복잡도가 낮은 덱 내장 메서드 이용
     visited_bfs[V] = True
     while queue:
         V = queue.popleft() #queue에 있는 첫번째 값 꺼냄
@@ -29,7 +29,7 @@ for _ in range(M):
     graph[a].append(b)
     graph[b].append(a)
 
-for i in graph: #오름차순 정렬(낮은 숫자부터 탐색색)
+for i in graph: #오름차순 정렬(낮은 숫자부터 탐색)
     i.sort()
 
 # dfs
